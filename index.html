@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="fav.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <title>Echo: A Music Web App</title>
+  </head>
+  <body>
+    <section id="main" class="bg-black text-white">
+      <!-- Modal Structure info-->
+      <div
+        class="modal fade"
+        id="echoModal"
+        tabindex="-1"
+        aria-labelledby="echoModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="echoModalLabel">
+                Echo: A Music Web App
+              </h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Echo is a minimalist and efficient music web app designed using
+              JavaScript, CSS, HTML, and Bootstrap. Developed in 6 days, Echo
+              dynamically populates the music library by fetching songs directly
+              from your directory using the Fetch API. Without the need for a
+              backend, Echo automatically lists and plays songs that are added
+              to the specified folders. This lightweight and responsive app
+              ensures a smooth and enjoyable listening experience across all
+              devices, making it easy to manage and play your music collection.
+              <p class="text-center mt-4">
+                &copy; 2024 Echo. All rights reserved by Prithvi Lohana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal info finish -->
+
+      <!-- main section -->
+      <div class="bg-black text-white main-container">
+        <div class="row">
+          <div class="col-md-3 right">
+            <div id="logo">
+              <h1 class="bebas-neue-regular">ECHO MUSIC</h1>
+              <img src="assets/images/close.svg" alt="closebutton" id="closeham" class="ham-none">
+            </div>
+            <div class="nav-bar">
+              <ul class="nav-my">
+                <li id="home">
+                  <img
+                    src="assets/images/home.svg"
+                    alt="home-tab"
+                    class="icons-nav"
+                  />
+                  <span>Home</span>
+                </li>
+                <li
+                  id="info"
+                  data-bs-toggle="modal"
+                  data-bs-target="#echoModal"
+                >
+                  <img
+                    src="assets/images/info.svg"
+                    alt="info-tab"
+                    class="icons-nav"
+                  />
+                  <span>Info</span>
+                </li>
+                <!-- <li id="albums">
+                  <img
+                    src="assets/images/albums.svg"
+                    alt="albums-tab"
+                    class="icons-nav"
+                  />
+                  <span>Albums</span>
+                </li> -->
+              </ul>
+            </div>
+            <div class="playlist">
+              <div class="text-wrap d-flex align-items-center">
+                <img src="assets/images/playlist.svg" alt="playlist" />
+                <h4 class="ms-2">Playlist</h4>
+              </div>
+              <ul class="songslist">
+                <!--  -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9 left">
+            <div class="main-albums">
+              <div class="left-head">
+                <div class="text-wrap">
+                  <h2>Albums</h2>
+                </div>
+                <div class="hamburger ham-none">
+                  <img
+                    src="assets/images/ham.svg"
+                    alt="hamburger"
+                    srcset=""
+                    id="ham"
+                  />
+                </div>
+              </div>
+              <div class="slider-wrap">
+                <ul class="album-slider"></ul>
+              </div>
+            </div>
+            <!-- <div class="mylist-portion">
+              <div class="favourite col-md-4">
+                <div class="heading-wrap">
+                  <h4 class="heading">Favourite</h4>
+                </div>
+                <div class="fav-wrap">
+                  <ul class="fav-list">
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                    <li class="fav-song">
+                      <div class="image-wrap cover">
+                        <img
+                          src="assets/images/cover.png"
+                          alt="favcover"
+                          srcset=""
+                        />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                      <div class="duration">
+                        <span class="durfav">00:00</span>
+                      </div>
+                      <div class="play">
+                        <button class="playfav">
+                          <img src="assets/images/play.svg" alt="" srcset="" />
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-8 tranding-albums">
+                <div class="heading-wrap">
+                  <h4 class="heading">Trending</h4>
+                </div>
+                <div class="trending-wrap">
+                  <ul class="trending-playlist">
+                    <li class="album-trend-box">
+                      <div class="image-wrap">
+                        <img src="assets/images/cover.png" alt="cover" />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                    </li>
+                    <li class="album-trend-box">
+                      <div class="image-wrap">
+                        <img src="assets/images/cover.png" alt="cover" />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                    </li>
+                    <li class="album-trend-box">
+                      <div class="image-wrap">
+                        <img src="assets/images/cover.png" alt="cover" />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                    </li>
+                    <li class="album-trend-box">
+                      <div class="image-wrap">
+                        <img src="assets/images/cover.png" alt="cover" />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                    </li>
+                    <li class="album-trend-box">
+                      <div class="image-wrap">
+                        <img src="assets/images/cover.png" alt="cover" />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                    </li>
+                    <li class="album-trend-box">
+                      <div class="image-wrap">
+                        <img src="assets/images/cover.png" alt="cover" />
+                      </div>
+                      <div class="text-wrap-inner">
+                        <h3>Album Name</h3>
+                        <span>Artist</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> -->
+            <div class="playbar-wrap">
+              <div class="playbar">
+                <div class="song-wrap">
+                  <h3 id="track-name" class="song-name"></h3>
+                </div>
+                <div class="controls">
+                  <div class="elements-play">
+                    <img
+                      src="assets/images/previous.svg"
+                      alt=""
+                      id="previous"
+                    />
+                    <img src="assets/images/play.svg" alt="" id="play" />
+                    <img src="assets/images/next.svg" alt="" id="next" />
+                  </div>
+                  <div class="duration-bar">
+                    <span class="start-time">00:00</span>
+                    <input
+                      type="range"
+                      id="duration"
+                      min="0"
+                      max="100"
+                      value="0"
+                    />
+                    <span class="end-time">00:00</span>
+                  </div>
+                </div>
+                <div class="volume">
+                  <img src="assets/images/volumeup.svg" alt="" id="volumeup" />
+                  <input
+                    type="range"
+                    id="volumebar"
+                    value="50"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
