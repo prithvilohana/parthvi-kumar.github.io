@@ -1,0 +1,284 @@
+@media only screen and (min-width: 1750px) {
+  .slider-wrap ul.album-slider .image-wrap img {
+    width: 238px;
+  }
+  .playlist ul.songslist {
+    height: 490px;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1600px) {
+  .slider-wrap ul.album-slider .image-wrap img {
+    width: 190px;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1440px) {
+  .slider-wrap ul.album-slider .image-wrap img {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .playlist ul.songslist {
+    height: 203px;
+  }
+  .main-albums .slider-wrap {
+    height: 339px;
+  }
+  .playbar-wrap {
+    bottom: 23px;
+    width: 97%;
+    right: 17px;
+  }
+  .right {
+    position: absolute;
+    left: -500px;
+    transition: 0.3s all ease-out;
+    z-index: 1004;
+    box-shadow: -2px -1px 20px #1c8fe170;
+    width: 31%;
+  }
+
+  .left {
+    width: 100%;
+  }
+  .ham-none {
+    display: block;
+  }
+  .left-head {
+    display: flex;
+    justify-content: space-between;
+  }
+  div#logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  div#logo h1 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .slider-wrap ul.album-slider .image-wrap img {
+    width: 125px;
+  }
+  .main-albums li.slider-col .text-wrap-inner h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .main-albums .text-wrap h2 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  div#logo h1 {
+    font-size: 1.5rem;
+  }
+  .nav-bar .nav-my li span {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+  }
+  .nav-bar .nav-my li img {
+    width: 17px;
+  }
+  .playlist h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .right {
+    width: 40%;
+  }
+  .playbar h3 {
+    font-size: 1.2rem;
+    line-height: 1rem;
+    width: 178px;
+  }
+  .playbar .song-wrap {
+    width: 24%;
+  }
+  .playbar .controls {
+    width: 50% !important;
+  }
+  .playbar-wrap {
+    bottom: 23px;
+    width: 95%;
+    right: 17px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slider-wrap ul.album-slider li.slider-col {
+    width: 31%;
+  }
+  .slider-wrap ul.album-slider .image-wrap img {
+    width: 134px;
+  }
+  .playbar-wrap {
+    bottom: 23px;
+    width: 93%;
+    right: 17px;
+  }
+  .right {
+    width: 48%;
+  }
+  .playlist ul.songslist li.song .text-wrap span.song-name {
+    width: 125px;
+  }
+  .playlist ul.songslist li.song {
+    gap: 16px;
+  }
+  div#echoModal .modal-content {
+    width: 89%;
+    margin: auto;
+  }
+  .modal-body {
+    font-size: 13px;
+  }
+  .playbar h3 {
+    font-size: 1.2rem;
+    line-height: 1rem;
+    width: 198px;
+  }
+  .playbar .controls {
+    width: 100% !important;
+  }
+  .playbar .song-wrap {
+    width: 100%;
+    text-align: center;
+  }
+  .playbar {
+    flex-direction: column;
+  }
+  .playbar .volume {
+    width: 41%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .playbar .song-wrap {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  input[type="range"] {
+    width: 77%;
+  }
+  .slider-wrap ul.album-slider li.slider-col {
+    width: 31%;
+  }
+  .slider-wrap ul.album-slider .image-wrap img {
+    width: 110px;
+  }
+  .main-albums li.slider-col .text-wrap-inner h3 {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+  .main-albums li.slider-col .text-wrap-inner span {
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+  }
+  .playbar-wrap {
+    bottom: 23px;
+    width: 445px;
+    right: 17px;
+  }
+  .elements-play img {
+    width: 16px;
+  }
+
+  .playbar .controls {
+    justify-content: start;
+    align-items: start;
+  }
+
+  .playbar .volume {
+    width: 34%;
+    position: absolute;
+    right: 14px;
+    top: 6px;
+  }
+
+  .playbar .volume img {
+    width: 19px;
+  }
+  .right {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 430px) {
+    .slider-wrap ul.album-slider li.slider-col {
+        width: 47%;
+    }
+    .slider-wrap ul.album-slider .image-wrap img {
+        width: 100%;
+    }
+    .playbar-wrap {
+        bottom: 23px;
+        width: 394px;
+        right: 17px;
+    }
+    input[type="range"] {
+        width: 74%;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .playbar-wrap {
+        bottom: 23px;
+        width: 379px;
+        right: 17px;
+    }
+    input[type="range"] {
+        width: 73%;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .playbar-wrap {
+        bottom: 23px;
+        width: 355px;
+        right: 17px;
+    }
+    input[type="range"] {
+        width: 71%;
+    }
+    .right {
+        width: 57%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .playbar-wrap {
+        bottom: 23px;
+        width: 341px;
+        right: 17px;
+    }
+    input[type="range"] {
+        width: 69%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .playbar-wrap {
+        bottom: 23px;
+        width: 325px;
+        right: 17px;
+    }
+    .right {
+        width: 64%;
+    }
+    input[type="range"] {
+        width: 68%;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .playbar-wrap {
+        bottom: 23px;
+        width: 305px;
+        right: 17px;
+    }
+    input[type="range"] {
+        width: 65%;
+    }
+}

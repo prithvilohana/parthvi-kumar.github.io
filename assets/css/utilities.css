@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+::-webkit-scrollbar {
+    width: 4px; 
+    height: 8px; 
+    filter: drop-shadow(2px 2px 6px #1c8fe1);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #1c8fe1; 
+    border-radius: 5px; 
+    box-shadow: 2 2 10px #1c8fe1;
+    filter: drop-shadow(2px 2px 6px #1c8fe1);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+    border-radius: 5px; 
+    filter: drop-shadow(2px 2px 6px #1c8fe1);
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg-black{
+    background-color: #121319;
+}
+.text-white{
+    color: white;
+}
+.main-para{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 8px;
+    font-size: 16px;
+    line-height: 22px;
+}
+html body h4 {
+    margin-bottom: 4px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html body h2 {
+    margin-bottom: 4px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html body h3 {
+    margin-bottom: 4px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html body span{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+button.slick-prev:before {
+    content: url('../images/left.svg'); /* Adjusted relative path */
+}
+
+button.slick-arrow {
+    font-size: 0px;
+    background: none;
+    border: none;
+}
+
+button.slick-next:before {
+    content: url('../images/right.svg'); /* Adjusted relative path */
+}
+.song-name {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Adjust this value based on your design */
+}
+
+.song-name::before {
+    content: attr(data-truncated);
+}
+
+.song-name[data-truncated]::before {
+    content: attr(data-truncated);
+}
+
+.song-name::after {
+    content: attr(data-ellipsis);
+}
+
+.song-name[data-ellipsis]::after {
+    content: attr(data-ellipsis);
+}
+@keyframes upAndDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.animated-img {
+    animation: upAndDown 2s infinite;
+}
+
+.card-my{
+    cursor: pointer;
+}
+
+
+/* info modal css */
+div#echoModal .modal-content {
+    background: #1d1d29;
+    border-radius: 12px;
+    padding: 7px;
+    text-align: center;
+}
+
+div#echoModal .modal-content h2#echoModalLabel {
+    text-align: center;
+    width: 100%;
+}
+
+div#echoModal .modal-content .modal-header {
+    justify-content: center;
+}
+
+div#echoModal .modal-content button.btn-close {
+    color: white !important;
+    filter: invert(1) brightness(1.5);
+}
+.ham-none{
+    display: none;
+}
